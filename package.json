@@ -1,0 +1,29 @@
+{
+  "name": "maria_confeccoes_api",
+  "version": "1.0.0",
+  "description": "API para comunicação da loja Maria e Maria Confecções",
+  "main": "main.js",
+  "scripts": {
+    "start": "npx nodemon main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hrVicenssotti/maria_confeccoes_api.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hrVicenssotti/maria_confeccoes_api/issues"
+  },
+  "homepage": "https://github.com/hrVicenssotti/maria_confeccoes_api#readme",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "config": "^3.3.7",
+    "consign": "^0.1.6",
+    "express": "^4.17.3",
+    "moment": "^2.29.3",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.19.0"
+  }
+}

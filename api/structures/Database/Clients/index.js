@@ -8,11 +8,17 @@ const colunas = {
     },
     cpf: {
         type: Sequelize.STRING,
-        allowNull: false
+        allowNull: false,
+        unique: true,
     },
-    rg: {
+    celular: {
         type: Sequelize.STRING,
-        allowNull: true
+        allowNull: true,
+    },
+    email: {
+        type: Sequelize.STRING,
+        allowNull: true,
+        unique: true,
     },
     data_nascimento: {
         type: Sequelize.DATE,
@@ -38,27 +44,7 @@ const colunas = {
         type: Sequelize.STRING,
         allowNull: true
     },
-    empresa: {
-        type: Sequelize.STRING,
-        allowNull: true
-    },
-    salario: {
-        type: Sequelize.FLOAT,
-        allowNull: true
-    },
-    data_contratacao: {
-        type: Sequelize.DATE,
-        allowNull: true
-    },
-    endereco_empresa: {
-        type: Sequelize.STRING,
-        allowNull: true
-    },
-    cidade_empresa: {
-        type: Sequelize.STRING,
-        allowNull: true
-    },
-    estado_empresa: {
+    observacoes: {
         type: Sequelize.STRING,
         allowNull: true
     }

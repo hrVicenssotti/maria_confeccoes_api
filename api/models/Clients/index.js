@@ -1,8 +1,15 @@
 const instance = require('../../structures/Database/Clients')
+const filter = require('../assets/filter')
+
+const allowedFieldsDefault = ['id', 'nome', 'celular', 'email', 'endereco', 'numero', 'bairro', 'cidade', 'estado']
 
 module.exports = {
     queryAll() {
         return instance.findAll()
+            .then(result => {
+                const resultado = JSON.parse(JSON.stringify(result))
+                return resultado.map((dados) => filter(dados, allowedFieldsDefault))
+            })
     },
     queryID(id) {
         return instance.findOne({
@@ -32,6 +39,13 @@ module.exports = {
         return instance.destroy({
             where: {
                 id: id
+            }
+        })
+        .then(result => {
+            if (result === 1) {
+                return { code_return: 'DEL001', message: 'Cliente deletado com sucesso'}
+            }else {
+                return { code_return: 'DEL002', message: 'Cliente não localizado' }
             }
         })
     }

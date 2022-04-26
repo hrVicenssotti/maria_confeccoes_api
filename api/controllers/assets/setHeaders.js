@@ -1,0 +1,1 @@
+module.exports = (response, parametro, valor) => response.setHeader(parametro, valor)

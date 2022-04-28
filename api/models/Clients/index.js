@@ -16,13 +16,16 @@ class Client{
                 const resultado = convert(result)
                 return resultado.map((dados) => filter(dados, this.allowedFieldsDefault))
             })
+            .catch(erro => erro.errors)
     }
     queryID(id) {
         return instance.findOne({
-            where: {
-                id: id
-            }
-        })
+                where: {
+                    id: id
+                }
+            })
+            .then(result => result ? result : {code_return: 'GET001', message: 'Nenhum cliente encontrado', id} )
+            .catch(erro => erro.errors)
     }
     add(object) {
         return instance.create(object)
@@ -48,6 +51,7 @@ class Client{
                     return { code_return: 'UP002', message: 'Cliente não atualizado ou não localizado' }
                 }
             })
+            .catch(erro => erro.errors)
     }
     delete(id) {
         return instance.destroy({

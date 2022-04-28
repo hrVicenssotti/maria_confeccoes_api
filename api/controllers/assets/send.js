@@ -1,1 +1,1 @@
-module.exports = (response, object) => response.send(JSON.stringify(object))
+module.exports = (response, status = 200, object) => response.status(status).send(JSON.stringify(object))

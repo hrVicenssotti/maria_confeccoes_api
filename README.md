@@ -23,4 +23,5 @@ https://nodejs.org/
 
 Quando baixado o repositório, rode os seguintes comandos no terminal:
 - npm install  -  Será instaldo os pacotes: expressJS, sequelizeJS, momentJS, bodyParser, config, mysql2.
+- node api/structures/Database/Inicialize/tables.js  -  Construção das tabelas no banco de dados (precisa ter o database já criado e indicado no campo mysql.data do default)
 - npm start  -  Fará com que o servidor express inicie na porta especificada no arquivo de config usando nodemon de forma temporária.

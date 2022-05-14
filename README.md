@@ -5,8 +5,9 @@ Para que todas as funcionalidades funcione corretamente, adicione a seu arquivo 
 
 {
     "mysql": {
-        "data": "Nome do servidor de banco de dados",
+        "data": "Nome do banco de dados",
         "host": "Endereço do servidor",
+        "port": "Porta do servidor",
         "user": "Usuario para acesso",
         "password": "Senha do usuario"
     },

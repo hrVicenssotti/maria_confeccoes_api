@@ -7,6 +7,7 @@ const instance = new Sequelize(
     config.get('mysql.password'),
     {
         host: config.get('mysql.host'),
+        port: config.get('mysql.port'),
         dialect: 'mysql'
     }
 )
